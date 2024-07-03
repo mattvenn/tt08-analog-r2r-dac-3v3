@@ -216,16 +216,16 @@ N -1160 970 -1150 970 {
 lab=vcc}
 N -590 330 -590 550 {
 lab=#net1}
-N -720 550 -590 550 {
+N -590 550 -420 550 {
 lab=#net1}
-N -720 550 -720 590 {
+N -420 550 -420 590 {
 lab=#net1}
 C {r2r.sym} -810 410 0 0 {name=x1}
 C {devices/lab_pin.sym} -1460 270 0 0 {name=p1 sig_type=std_logic lab=b0}
 C {devices/lab_pin.sym} -1460 370 0 0 {name=p2 sig_type=std_logic lab=b1}
 C {devices/lab_pin.sym} -1460 470 0 0 {name=p3 sig_type=std_logic lab=b2}
 C {devices/lab_pin.sym} -1460 570 0 0 {name=p4 sig_type=std_logic lab=b3}
-C {devices/lab_pin.sym} -420 590 2 0 {name=p5 sig_type=std_logic lab=out}
+C {devices/lab_pin.sym} -720 590 0 0 {name=p5 sig_type=std_logic lab=out}
 C {devices/code.sym} -940 1180 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
