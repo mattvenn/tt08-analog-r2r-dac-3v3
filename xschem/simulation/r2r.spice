@@ -1,0 +1,21 @@
+** sch_path: /home/matt/work/asic-workshop/shuttle-tt08/tt08-analog-r2r-dac-3v3/xschem/r2r.sch
+.subckt r2r b4 b2 b1 b0 b5 b6 b7 b3 out VGND
+*.PININFO b0:I b1:I b2:I b3:I b4:I b5:I b6:I b7:I out:O VGND:B
+XR1 net1 b0 VGND sky130_fd_pr__res_high_po_0p35 L=40 mult=1 m=1
+XR2 net2 b1 VGND sky130_fd_pr__res_high_po_0p35 L=40 mult=1 m=1
+XR3 net3 b2 VGND sky130_fd_pr__res_high_po_0p35 L=40 mult=1 m=1
+XR4 net4 b3 VGND sky130_fd_pr__res_high_po_0p35 L=40 mult=1 m=1
+XR5 net5 b4 VGND sky130_fd_pr__res_high_po_0p35 L=40 mult=1 m=1
+XR6 net6 b5 VGND sky130_fd_pr__res_high_po_0p35 L=40 mult=1 m=1
+XR7 net7 b6 VGND sky130_fd_pr__res_high_po_0p35 L=40 mult=1 m=1
+XR8 out b7 VGND sky130_fd_pr__res_high_po_0p35 L=40 mult=1 m=1
+XR9 net2 net1 VGND sky130_fd_pr__res_high_po_0p35 L=20 mult=1 m=1
+XR10 net3 net2 VGND sky130_fd_pr__res_high_po_0p35 L=20 mult=1 m=1
+XR11 net4 net3 VGND sky130_fd_pr__res_high_po_0p35 L=20 mult=1 m=1
+XR12 net5 net4 VGND sky130_fd_pr__res_high_po_0p35 L=20 mult=1 m=1
+XR13 net6 net5 VGND sky130_fd_pr__res_high_po_0p35 L=20 mult=1 m=1
+XR14 net7 net6 VGND sky130_fd_pr__res_high_po_0p35 L=20 mult=1 m=1
+XR15 out net7 VGND sky130_fd_pr__res_high_po_0p35 L=20 mult=1 m=1
+XR16 VGND net1 VGND sky130_fd_pr__res_high_po_0p35 L=40 mult=1 m=1
+.ends
+.end
