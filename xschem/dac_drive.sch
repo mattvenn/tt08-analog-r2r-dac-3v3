@@ -23,21 +23,21 @@ lab=ctrl_n}
 N -130 -430 -50 -430 {
 lab=ctrl_n}
 N 460 -400 460 -360 {
-lab=#net1}
+lab=m9m11}
 N 680 -400 680 -360 {
-lab=#net2}
+lab=m10m12}
 N 460 -380 520 -380 {
-lab=#net1}
+lab=m9m11}
 N 520 -380 600 -430 {
-lab=#net1}
+lab=m9m11}
 N 600 -430 640 -430 {
-lab=#net1}
+lab=m9m11}
 N 500 -430 540 -430 {
-lab=#net2}
+lab=m10m12}
 N 540 -430 620 -380 {
-lab=#net2}
+lab=m10m12}
 N 620 -380 680 -380 {
-lab=#net2}
+lab=m10m12}
 N 400 -260 680 -260 {
 lab=VGND}
 N 680 -300 680 -260 {
@@ -53,9 +53,9 @@ lab=VAPWR}
 N 680 -500 680 -460 {
 lab=VAPWR}
 N 680 -380 720 -380 {
-lab=#net2}
+lab=m10m12}
 N 720 -380 740 -380 {
-lab=#net2}
+lab=m10m12}
 N 460 -600 460 -560 {
 lab=VAPWR}
 N 460 -600 680 -600 {
@@ -65,13 +65,13 @@ lab=VAPWR}
 N 400 -600 460 -600 {
 lab=VAPWR}
 N 840 -530 860 -530 {
-lab=#net2}
+lab=m10m12}
 N 840 -530 840 -330 {
-lab=#net2}
+lab=m10m12}
 N 840 -330 860 -330 {
-lab=#net2}
+lab=m10m12}
 N 740 -430 840 -430 {
-lab=#net2}
+lab=m10m12}
 N 680 -600 900 -600 {
 lab=VAPWR}
 N 900 -600 900 -560 {
@@ -81,9 +81,9 @@ lab=VGND}
 N 900 -300 900 -260 {
 lab=VGND}
 N 900 -500 900 -360 {
-lab=#net3}
+lab=out_drive}
 N 900 -430 940 -430 {
-lab=#net3}
+lab=out_drive}
 N 120 -260 400 -260 {
 lab=VGND}
 N 120 -600 400 -600 {
@@ -97,21 +97,21 @@ lab=VDPWR}
 N -130 -600 -130 -530 {
 lab=VDPWR}
 N 740 -430 740 -380 {
-lab=#net2}
+lab=m10m12}
 N 680 -560 680 -500 {
 lab=VAPWR}
 N 460 -560 460 -500 {
 lab=VAPWR}
 N 1010 -530 1030 -530 {
-lab=#net3}
+lab=out_drive}
 N 1010 -530 1010 -330 {
-lab=#net3}
+lab=out_drive}
 N 1010 -330 1030 -330 {
-lab=#net3}
+lab=out_drive}
 N 1070 -500 1070 -360 {
 lab=out}
 N 940 -430 1010 -430 {
-lab=#net3}
+lab=out_drive}
 N 900 -600 1070 -600 {
 lab=VAPWR}
 N 1070 -600 1070 -560 {
@@ -281,3 +281,8 @@ model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {devices/opin.sym} 1140 -430 0 0 {name=p1 lab=out}
+C {devices/lab_wire.sym} 930 -430 0 1 {name=p2 sig_type=std_logic lab=out_drive}
+C {devices/lab_wire.sym} 680 -380 0 1 {name=p3 sig_type=std_logic lab=m10m12
+}
+C {devices/lab_wire.sym} 460 -380 2 1 {name=p4 sig_type=std_logic lab=m9m11
+}
