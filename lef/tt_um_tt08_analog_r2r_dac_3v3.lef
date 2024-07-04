@@ -1,6 +1,6 @@
-MACRO tt_um_tt08_analog_test
+MACRO tt_um_tt08_analog_r2r_dac_3v3
   CLASS BLOCK ;
-  FOREIGN tt_um_tt08_analog_test ;
+  FOREIGN tt_um_tt08_analog_r2r_dac_3v3 ;
   ORIGIN 0.000 0.000 ;
   SIZE 145.360 BY 225.760 ;
   PIN clk
@@ -562,6 +562,6 @@ MACRO tt_um_tt08_analog_test
         RECT 98.830 1.000 116.450 1.400 ;
         RECT 118.150 1.000 135.770 1.400 ;
   END
-END tt_um_tt08_analog_test
+END tt_um_tt08_analog_r2r_dac_3v3
 END LIBRARY
 
