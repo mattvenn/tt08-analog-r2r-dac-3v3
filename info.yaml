@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  title:        "Analog 8 bit 3.3v R2R DAC"      # Project title
+  author:       "Matt Venn"      # Your name
+  discord:      "mattvenn"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "A simple 8 bit DAC with a sawtooth waveform driver and 3.3v output"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -24,14 +24,14 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "bit 0"
+  ui[1]: "bit 1"
+  ui[2]: "bit 2"
+  ui[3]: "bit 3"
+  ui[4]: "bit 4"
+  ui[5]: "bit 5"
+  ui[6]: "bit 6"
+  ui[7]: "bit 7"
 
   # Outputs
   uo[0]: ""
@@ -44,8 +44,8 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
+  uio[0]: "external data"
+  uio[1]: "load divider"
   uio[2]: ""
   uio[3]: ""
   uio[4]: ""
@@ -54,7 +54,7 @@ pinout:
   uio[7]: ""
 
   # Analog pins - make sure to also set "analog_pins" above, else the pins won't be connected
-  ua[0]: ""
+  ua[0]: "DAC output"
   ua[1]: ""
   ua[2]: ""
   ua[3]: ""
