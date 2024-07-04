@@ -1,4 +1,4 @@
-PROJECT_NAME ?= tt_um_tt08_analog_r2r_dac_3v3
+PROJECT_NAME ?= tt_um_analog_r2r_dac_3v3
 MAGIC_RC := $(PDK_ROOT)/sky130A/libs.tech/magic/sky130A.magicrc
 TEMPLATE_FILE := tt_analog_1x2.def
 TEMPLATE_FILE := tt_analog_1x2_3v3.def
