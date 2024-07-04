@@ -2,9 +2,9 @@ VERSION 5.7 ;
   NOWIREEXTENSIONATPIN ON ;
   DIVIDERCHAR "/" ;
   BUSBITCHARS "[]" ;
-MACRO tt_um_analog_r2r_dac_3v3
+MACRO tt_um_mattvenn_r2r_dac_3v3
   CLASS BLOCK ;
-  FOREIGN tt_um_analog_r2r_dac_3v3 ;
+  FOREIGN tt_um_mattvenn_r2r_dac_3v3 ;
   ORIGIN 0.000 0.000 ;
   SIZE 145.360 BY 225.760 ;
   PIN clk
@@ -566,6 +566,6 @@ MACRO tt_um_analog_r2r_dac_3v3
         RECT 98.830 1.000 116.450 1.400 ;
         RECT 118.150 1.000 135.770 1.400 ;
   END
-END tt_um_analog_r2r_dac_3v3
+END tt_um_mattvenn_r2r_dac_3v3
 END LIBRARY
 
