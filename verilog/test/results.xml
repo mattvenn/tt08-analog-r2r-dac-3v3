@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1710506595" />
+    <testcase name="test" classname="test" file="/home/matt/work/asic-workshop/shuttle-2404/tt06-analog-r2r-dac/r2r_dac_control/test/test.py" lineno="1" time="0.2844700813293457" sim_time_ns="25900000.001" ratio_time="91046481.51386519" />
+  </testsuite>
+</testsuites>
