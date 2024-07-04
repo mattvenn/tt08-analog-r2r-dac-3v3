@@ -1,15 +1,15 @@
 ** sch_path: /home/matt/work/asic-workshop/shuttle-tt08/tt08-analog-r2r-dac-3v3/xschem/dac_drive.sch
 .subckt dac_drive VAPWR VDPWR ctrl out VGND
 *.PININFO ctrl:I VGND:B VDPWR:B VAPWR:B out:O
-XM1 out_drive m10m12 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.84 nf=1 m=1
-XM2 out_drive m10m12 VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
-XM7 ctrl_n ctrl VGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
-XM8 ctrl_n ctrl VDPWR sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 nf=1 m=1
-XM9 m9m11 ctrl VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
-XM10 m10m12 ctrl_n VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
-XM11 m9m11 m10m12 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
-XM12 m10m12 m9m11 VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
-XM3 out out_drive VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
-XM4 out out_drive VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
+XM8 ctrl_n ctrl VDPWR VDPWR sky130_fd_pr__pfet_01v8_hvt L=0.15 W=1 nf=1 m=1
+XM7 ctrl_n ctrl VGND VGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM11 m9m11 m10m12 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM9 m9m11 ctrl VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM10 m10m12 ctrl_n VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM12 m10m12 m9m11 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM1 out_drive m10m12 VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.84 nf=1 m=1
+XM2 out_drive m10m12 VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM3 out out_drive VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=9 nf=3 m=1
+XM4 out out_drive VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
 .ends
 .end
