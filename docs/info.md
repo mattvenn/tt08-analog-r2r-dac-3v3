@@ -9,12 +9,24 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+A simple 8 bit R2R DAC. Driven externally or by an OpenLane generated sawtooth waveform generator.
+
+3.3v output is achieved with level shifting drivers.
 
 ## How to test
 
-Explain how to use your project
+### Drive externally
+
+Set the `external data` input high to provide the DAC with external data.
+Then drive the 8 inputs and observe the analog output.
+
+### Drive with internal sawtooth wave generator
+
+Set the `external data` input low to enable the sawtooth generator.
+A sawtooth wave should be seen on the analog output.
+
+To change the frequency, set the inputs and then raise the 'load divider' input.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+A multimeter to measure the output voltage on analog pin 0.

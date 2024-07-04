@@ -1,8 +1,10 @@
-![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
+![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/lvs/badge.svg)
 
-# Tiny Tapeout Analog Project Template
+# Tiny Tapeout Analog R2R DAC
 
 - [Read the documentation for project](docs/info.md)
+
+![layout](docs/layout.png)
 
 ## What is Tiny Tapeout?
 
