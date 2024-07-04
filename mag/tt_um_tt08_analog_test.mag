@@ -1,8 +1,6 @@
 magic
 tech sky130A
-timestamp 1719936137
-<< checkpaint >>
-rect -530 -130 1530 22706
+timestamp 1720101481
 << metal4 >>
 rect 1503 22476 1533 22576
 rect 1779 22476 1809 22576
@@ -58,6 +56,19 @@ rect 7821 0 7911 100
 rect 9753 0 9843 100
 rect 11685 0 11775 100
 rect 13617 0 13707 100
+use dac_drive  dac_drive_0
+array 0 0 -2400 0 7 1400
+timestamp 1720097992
+transform 0 1 2560 -1 0 8180
+box -1500 -460 680 662
+use r2r  r2r_0
+timestamp 1710085389
+transform 0 1 5200 -1 0 3500
+box -1300 1200 2100 8800
+use r2r_dac_control  r2r_dac_control_0
+timestamp 1720101481
+transform 1 0 1677 0 1 13551
+box 257 248 8000 8000
 << labels >>
 flabel metal4 s 12819 22476 12849 22576 0 FreeSans 240 90 0 0 clk
 port 0 nsew signal input
