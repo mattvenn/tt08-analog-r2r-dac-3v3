@@ -98,8 +98,6 @@ N -920 -120 -890 -120 {
 lab=b0}
 N -890 -120 -890 -100 {
 lab=b0}
-N -660 330 -590 330 {
-lab=#net1}
 N -540 150 -540 170 {
 lab=GND}
 N -570 70 -540 70 {
@@ -125,55 +123,55 @@ lab=b4}
 N -890 70 -890 90 {
 lab=b4}
 N -1160 310 -960 310 {
-lab=#net2}
+lab=#net1}
 N -960 310 -960 330 {
-lab=#net2}
+lab=#net1}
 N -1160 410 -1100 410 {
-lab=#net3}
+lab=#net2}
 N -1100 360 -1100 410 {
-lab=#net3}
+lab=#net2}
 N -1100 350 -1100 360 {
-lab=#net3}
+lab=#net2}
 N -1100 350 -960 350 {
-lab=#net3}
+lab=#net2}
 N -1160 510 -1080 510 {
-lab=#net4}
+lab=#net3}
 N -1080 370 -1080 510 {
-lab=#net4}
+lab=#net3}
 N -1080 370 -960 370 {
-lab=#net4}
+lab=#net3}
 N -1060 390 -960 390 {
-lab=#net5}
+lab=#net4}
 N -1060 390 -1060 610 {
-lab=#net5}
+lab=#net4}
 N -1160 610 -1060 610 {
-lab=#net5}
+lab=#net4}
 N -1040 410 -960 410 {
-lab=#net6}
+lab=#net5}
 N -1040 410 -1040 710 {
-lab=#net6}
+lab=#net5}
 N -1160 710 -1040 710 {
-lab=#net6}
+lab=#net5}
 N -1160 810 -1020 810 {
-lab=#net7}
+lab=#net6}
 N -1020 430 -1020 810 {
-lab=#net7}
+lab=#net6}
 N -1020 430 -960 430 {
-lab=#net7}
+lab=#net6}
 N -1000 450 -960 450 {
-lab=#net8}
+lab=#net7}
 N -1000 450 -1000 910 {
-lab=#net8}
+lab=#net7}
 N -1160 910 -1000 910 {
-lab=#net8}
+lab=#net7}
 N -1160 910 -1000 910 {
-lab=#net8}
+lab=#net7}
 N -1160 1010 -980 1010 {
-lab=#net9}
+lab=#net8}
 N -980 470 -960 470 {
-lab=#net9}
+lab=#net8}
 N -980 470 -980 1010 {
-lab=#net9}
+lab=#net8}
 N -1370 -120 -1370 -110 {
 lab=vcc}
 N -1370 -50 -1370 -40 {
@@ -214,13 +212,13 @@ N -1160 990 -1150 990 {
 lab=vdd}
 N -1160 970 -1150 970 {
 lab=vcc}
-N -590 330 -590 550 {
-lab=#net1}
 N -590 550 -420 550 {
-lab=#net1}
+lab=#net9}
 N -420 550 -420 590 {
-lab=#net1}
-C {r2r.sym} -810 410 0 0 {name=x1}
+lab=#net9}
+N -660 330 -590 330 {}
+N -590 330 -590 550 {}
+C {r2r.sym} -810 400 0 0 {name=x1}
 C {devices/lab_pin.sym} -1460 270 0 0 {name=p1 sig_type=std_logic lab=b0}
 C {devices/lab_pin.sym} -1460 370 0 0 {name=p2 sig_type=std_logic lab=b1}
 C {devices/lab_pin.sym} -1460 470 0 0 {name=p3 sig_type=std_logic lab=b2}
@@ -248,12 +246,11 @@ C {devices/vsource.sym} -890 -70 0 0 {name=V4 value="pulse(0 1.8 0 10p 10p 50n 1
 C {devices/gnd.sym} -890 -20 0 0 {name=l4 lab=GND}
 C {devices/lab_pin.sym} -920 -120 0 0 {name=p9 sig_type=std_logic lab=b0
 }
-C {devices/gnd.sym} -660 350 0 0 {name=l7 lab=GND}
 C {devices/launcher.sym} -460 1280 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tb_dac.raw tran"
 }
-C {devices/gnd.sym} -660 370 0 0 {name=l9 lab=GND}
+C {devices/gnd.sym} -660 350 0 0 {name=l9 lab=GND}
 C {devices/code.sym} -780 1180 0 0 {name=SIMULATION
 only_toplevel=false 
 value="
