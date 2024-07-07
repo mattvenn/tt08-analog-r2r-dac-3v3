@@ -13,9 +13,18 @@ adut [ clk n_rst ext_data d7 d6 d5 d4 d3 d2 d1 d0 load_divider ] [b7 b6 b5 b4 b3
 * had to edit spice exported by xschem to add the subckt and ends
 
 .include "../xschem/simulation/r2r.spice" 
+.include "../xschem/simulation/dac_drive.spice" 
 *.include "../mag/r2r.spice" 
 
-xr2r b0 b1 b2 b3 b4 b5 b6 b7 out 0 0 r2r
+xr2r b0_3v3 b1_3v3 b2_3v3 b3_3v3 b4_3v3 b5_3v3 b6_3v3 b7_3v3 out 0 r2r
+xdac_d0 vaa vcc b0 b0_3v3 0 dac_drive
+xdac_d1 vaa vcc b1 b1_3v3 0 dac_drive
+xdac_d2 vaa vcc b2 b2_3v3 0 dac_drive
+xdac_d3 vaa vcc b3 b3_3v3 0 dac_drive
+xdac_d4 vaa vcc b4 b4_3v3 0 dac_drive
+xdac_d5 vaa vcc b5 b5_3v3 0 dac_drive
+xdac_d6 vaa vcc b6 b6_3v3 0 dac_drive
+xdac_d7 vaa vcc b7 b7_3v3 0 dac_drive
 
 * simulate tt output path
 R1 out pin_out 500
@@ -27,6 +36,7 @@ C1 out 0 5p
 
 .param vcc=1.8
 vcc vcc 0 {vcc}
+vaa vaa 0 3.3
 
 * Digital clock signal
 

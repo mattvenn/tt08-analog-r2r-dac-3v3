@@ -4,7 +4,5 @@ https://sourceforge.net/p/ngspice/ngspice/ci/master/tree/examples/xspice/verilat
 
 # Instructions
 
-ngspice vlnggen ../verilog/rtl/r2r_dac_control.v
-ngspice mixed.cir
-
-
+    ngspice vlnggen ../verilog/rtl/*v
+    ngspice mixed.cir

@@ -10,12 +10,20 @@ module r2r_dac_control (
 
     reg rst;
     reg [7:0] divider;
-    reg [15:0] counter;
+    reg [7:0] sample;
 
     initial begin
         $dumpfile ("r2r_dac_control.vcd");
         $dumpvars (0, r2r_dac_control);
     end
+
+    // sine wave
+    sine_lookup sine_lookup(
+        .clk(clk),
+        .rst(rst),
+        .divider({4'b0000, divider}),
+        .sample(sample)
+    );
 
     // reset handling
     always @(posedge clk or posedge n_rst) begin
@@ -25,7 +33,6 @@ module r2r_dac_control (
             rst <= 1'b1;
     end
 
-    // load divider
     always @(posedge clk) begin
         if(rst)
             divider <= 0;
@@ -36,18 +43,11 @@ module r2r_dac_control (
     // counter and r2r output
     always @(posedge clk) begin
         if(rst) begin
-            counter <= 0;
             r2r_out <= 0;
         end else if(ext_data)
             r2r_out <= data;
         else begin
-        /* verilator lint_off WIDTHEXPAND */
-            if(counter >= (divider << 8)) begin
-        /* lint_on */
-                counter <= 0;
-                r2r_out <= r2r_out + 1;
-            end else 
-                counter <= counter + 1;
+            r2r_out <= sample;
         end
     end
 
