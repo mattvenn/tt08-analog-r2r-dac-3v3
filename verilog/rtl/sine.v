@@ -33,57 +33,62 @@ module sine_lookup(
     // ROM to look up values across 1/4 of a sine wave
     // Data generated with the following Python:
     /*
-        for i in range(64):
-            val = int(math.sin(i*math.pi/(2*64))*128)
+        resolution = 64
+        scale = 127
+        start = 0.5 - math.asin(1/(2*scale))*resolution
+        end = resolution - 0.5
+        for i in range(resolution):
+            x = start + (end - start) * i / (resolution - 1)
+            val = int(round(math.sin(x*math.pi/(2*resolution))*scale))
             print(f"{i}: raw_sine_rom = 7'd{val};")
     */
     function [6:0] raw_sine_rom(input [5:0] val);
         case (val)
-0: raw_sine_rom = 7'd0;
-1: raw_sine_rom = 7'd3;
-2: raw_sine_rom = 7'd6;
-3: raw_sine_rom = 7'd9;
-4: raw_sine_rom = 7'd12;
-5: raw_sine_rom = 7'd15;
-6: raw_sine_rom = 7'd18;
-7: raw_sine_rom = 7'd21;
-8: raw_sine_rom = 7'd24;
-9: raw_sine_rom = 7'd28;
-10: raw_sine_rom = 7'd31;
-11: raw_sine_rom = 7'd34;
-12: raw_sine_rom = 7'd37;
-13: raw_sine_rom = 7'd40;
-14: raw_sine_rom = 7'd43;
-15: raw_sine_rom = 7'd46;
-16: raw_sine_rom = 7'd48;
-17: raw_sine_rom = 7'd51;
-18: raw_sine_rom = 7'd54;
-19: raw_sine_rom = 7'd57;
-20: raw_sine_rom = 7'd60;
+0: raw_sine_rom = 7'd1;
+1: raw_sine_rom = 7'd4;
+2: raw_sine_rom = 7'd7;
+3: raw_sine_rom = 7'd10;
+4: raw_sine_rom = 7'd13;
+5: raw_sine_rom = 7'd16;
+6: raw_sine_rom = 7'd19;
+7: raw_sine_rom = 7'd23;
+8: raw_sine_rom = 7'd26;
+9: raw_sine_rom = 7'd29;
+10: raw_sine_rom = 7'd32;
+11: raw_sine_rom = 7'd35;
+12: raw_sine_rom = 7'd38;
+13: raw_sine_rom = 7'd41;
+14: raw_sine_rom = 7'd44;
+15: raw_sine_rom = 7'd47;
+16: raw_sine_rom = 7'd49;
+17: raw_sine_rom = 7'd52;
+18: raw_sine_rom = 7'd55;
+19: raw_sine_rom = 7'd58;
+20: raw_sine_rom = 7'd61;
 21: raw_sine_rom = 7'd63;
-22: raw_sine_rom = 7'd65;
-23: raw_sine_rom = 7'd68;
+22: raw_sine_rom = 7'd66;
+23: raw_sine_rom = 7'd69;
 24: raw_sine_rom = 7'd71;
-25: raw_sine_rom = 7'd73;
-26: raw_sine_rom = 7'd76;
-27: raw_sine_rom = 7'd78;
+25: raw_sine_rom = 7'd74;
+26: raw_sine_rom = 7'd77;
+27: raw_sine_rom = 7'd79;
 28: raw_sine_rom = 7'd81;
-29: raw_sine_rom = 7'd83;
-30: raw_sine_rom = 7'd85;
+29: raw_sine_rom = 7'd84;
+30: raw_sine_rom = 7'd86;
 31: raw_sine_rom = 7'd88;
-32: raw_sine_rom = 7'd90;
-33: raw_sine_rom = 7'd92;
-34: raw_sine_rom = 7'd94;
-35: raw_sine_rom = 7'd96;
-36: raw_sine_rom = 7'd98;
-37: raw_sine_rom = 7'd100;
-38: raw_sine_rom = 7'd102;
-39: raw_sine_rom = 7'd104;
+32: raw_sine_rom = 7'd91;
+33: raw_sine_rom = 7'd93;
+34: raw_sine_rom = 7'd95;
+35: raw_sine_rom = 7'd97;
+36: raw_sine_rom = 7'd99;
+37: raw_sine_rom = 7'd101;
+38: raw_sine_rom = 7'd103;
+39: raw_sine_rom = 7'd105;
 40: raw_sine_rom = 7'd106;
 41: raw_sine_rom = 7'd108;
-42: raw_sine_rom = 7'd109;
+42: raw_sine_rom = 7'd110;
 43: raw_sine_rom = 7'd111;
-44: raw_sine_rom = 7'd112;
+44: raw_sine_rom = 7'd113;
 45: raw_sine_rom = 7'd114;
 46: raw_sine_rom = 7'd115;
 47: raw_sine_rom = 7'd117;
@@ -96,9 +101,9 @@ module sine_lookup(
 54: raw_sine_rom = 7'd124;
 55: raw_sine_rom = 7'd124;
 56: raw_sine_rom = 7'd125;
-57: raw_sine_rom = 7'd126;
+57: raw_sine_rom = 7'd125;
 58: raw_sine_rom = 7'd126;
-59: raw_sine_rom = 7'd127;
+59: raw_sine_rom = 7'd126;
 60: raw_sine_rom = 7'd127;
 61: raw_sine_rom = 7'd127;
 62: raw_sine_rom = 7'd127;
@@ -111,7 +116,7 @@ module sine_lookup(
         reg [5:0] negated_val;
         reg [6:0] half_sine;
         negated_val = 6'd63 - val[5:0];
-        half_sine = val[6] ? raw_sine_rom(negated_val[5:0]) : raw_sine_rom(val[5:0]);
+        half_sine = raw_sine_rom(val[6] ? negated_val[5:0] : val[5:0]);
         sine = val[7] ? 7'd127 - half_sine : {1'b1, half_sine};
     endfunction
 
