@@ -16,7 +16,10 @@ adut [ clk n_rst ext_data d7 d6 d5 d4 d3 d2 d1 d0 load_divider ] [b7 b6 b5 b4 b3
 .include "../xschem/simulation/dac_drive.spice" 
 *.include "../mag/r2r.spice" 
 
+* the r2r DAC
 xr2r b0_3v3 b1_3v3 b2_3v3 b3_3v3 b4_3v3 b5_3v3 b6_3v3 b7_3v3 out 0 r2r
+
+* the 8 level shifting drivers
 xdac_d0 vaa vcc b0 b0_3v3 0 dac_drive
 xdac_d1 vaa vcc b1 b1_3v3 0 dac_drive
 xdac_d2 vaa vcc b2 b2_3v3 0 dac_drive
