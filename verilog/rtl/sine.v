@@ -7,6 +7,7 @@ module sine_lookup(
 
     input wire [11:0] divider,  // Ouput frequency is clk / (256 * (divider+1)), giving a minimum frequency of ~47Hz at a 50MHz clock
 
+    output reg cnt_zero,
     output wire [7:0] sample
 );
 
@@ -25,8 +26,14 @@ module sine_lookup(
             count <= count + 1;
             if (count == divider) begin
                 count <= 0;
+                cnt_zero <= 1;
                 sine_input <= sine_input + 1;
             end
+
+            if(sine_input == 0)
+                cnt_zero <= 1;
+            else
+                cnt_zero <= 0;
         end
     end
 

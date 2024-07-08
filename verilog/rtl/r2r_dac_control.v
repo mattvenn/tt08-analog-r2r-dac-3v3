@@ -5,6 +5,7 @@ module r2r_dac_control (
     input wire ext_data,            // if this is high, then DAC data comes from ui_in[7:0]
     input wire [7:0] data,          // connect to ui_in[7:0]
     input wire load_divider,        // load value set on data to the clock divider
+    output wire cnt_zero,
     output reg [7:0] r2r_out        // 8 bit out to the R2R DAC
     );
 
@@ -21,8 +22,9 @@ module r2r_dac_control (
     sine_lookup sine_lookup(
         .clk(clk),
         .rst(rst),
-        .divider({4'b0000, divider}),
-        .sample(sample)
+        .divider({4'b0000, divider}), // only bottom 8 bits of the divider can be set
+        .sample(sample),
+        .cnt_zero(cnt_zero)
     );
 
     // reset handling
