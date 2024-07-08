@@ -1,19 +1,21 @@
 [*]
-[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Sun Jul  7 08:47:04 2024
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Mon Jul  8 12:31:24 2024
 [*]
 [dumpfile] "/home/matt/work/asic-workshop/shuttle-tt08/tt08-analog-r2r-dac-3v3/verilog/test/r2r_dac_control.vcd"
-[dumpfile_mtime] "Sun Jul  7 08:45:23 2024"
-[dumpfile_size] 47503
+[dumpfile_mtime] "Mon Jul  8 12:31:11 2024"
+[dumpfile_size] 81222
 [savefile] "/home/matt/work/asic-workshop/shuttle-tt08/tt08-analog-r2r-dac-3v3/verilog/test/r2r_dac_control.gtkw"
 [timestart] 0
-[size] 1848 1009
+[size] 1200 1553
 [pos] -1 -1
-*-29.700001 3650000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-32.599998 5440000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] r2r_dac_control.
+[treeopen] r2r_dac_control.sine_lookup.
 [sst_width] 333
-[signals_width] 234
+[signals_width] 353
 [sst_expanded] 1
-[sst_vpaned_height] 320
+[sst_vpaned_height] 524
 @28
 r2r_dac_control.clk
 r2r_dac_control.n_rst
@@ -21,11 +23,14 @@ r2r_dac_control.n_rst
 r2r_dac_control.data[7:0]
 @28
 r2r_dac_control.load_divider
-@23
+@22
 r2r_dac_control.divider[7:0]
 @28
 r2r_dac_control.ext_data
-@800022
+r2r_dac_control.sine_lookup.cnt_zero
+@23
+r2r_dac_control.sine_lookup.sine_input[7:0]
+@800024
 r2r_dac_control.r2r_out[7:0]
 @28
 (0)r2r_dac_control.r2r_out[7:0]
