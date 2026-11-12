@@ -1,13 +1,13 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.8RC file_version=1.2}
 G {}
 K {}
 V {}
 S {}
+F {}
 E {}
 B 2 -290 390 510 790 {flags=graph
-y1=4.7e-05
-y2=3.3
+y1=6.8e-09
+y2=3.2
 ypos1=0
 ypos2=2
 divy=5
@@ -216,8 +216,96 @@ N -590 550 -420 550 {
 lab=#net9}
 N -420 550 -420 590 {
 lab=#net9}
-N -660 330 -590 330 {}
-N -590 330 -590 550 {}
+N -660 330 -590 330 {lab=#net9}
+N -590 330 -590 550 {lab=#net9}
+N -2310 320 -2110 320 {
+lab=#net10}
+N -2110 320 -2110 340 {
+lab=#net10}
+N -2310 420 -2250 420 {
+lab=#net11}
+N -2250 370 -2250 420 {
+lab=#net11}
+N -2250 360 -2250 370 {
+lab=#net11}
+N -2250 360 -2110 360 {
+lab=#net11}
+N -2310 520 -2230 520 {
+lab=#net12}
+N -2230 380 -2230 520 {
+lab=#net12}
+N -2230 380 -2110 380 {
+lab=#net12}
+N -2210 400 -2110 400 {
+lab=#net13}
+N -2210 400 -2210 620 {
+lab=#net13}
+N -2310 620 -2210 620 {
+lab=#net13}
+N -2190 420 -2110 420 {
+lab=#net14}
+N -2190 420 -2190 720 {
+lab=#net14}
+N -2310 720 -2190 720 {
+lab=#net14}
+N -2310 820 -2170 820 {
+lab=#net15}
+N -2170 440 -2170 820 {
+lab=#net15}
+N -2170 440 -2110 440 {
+lab=#net15}
+N -2150 460 -2110 460 {
+lab=#net16}
+N -2150 460 -2150 920 {
+lab=#net16}
+N -2310 920 -2150 920 {
+lab=#net16}
+N -2310 920 -2150 920 {
+lab=#net16}
+N -2310 1020 -2130 1020 {
+lab=#net17}
+N -2130 480 -2110 480 {
+lab=#net17}
+N -2130 480 -2130 1020 {
+lab=#net17}
+N -2320 300 -2310 300 {
+lab=vdd}
+N -2320 280 -2310 280 {
+lab=vcc}
+N -2310 400 -2300 400 {
+lab=vdd}
+N -2310 380 -2300 380 {
+lab=vcc}
+N -2310 500 -2300 500 {
+lab=vdd}
+N -2310 480 -2300 480 {
+lab=vcc}
+N -2310 600 -2300 600 {
+lab=vdd}
+N -2310 580 -2300 580 {
+lab=vcc}
+N -2310 700 -2300 700 {
+lab=vdd}
+N -2310 680 -2300 680 {
+lab=vcc}
+N -2310 800 -2300 800 {
+lab=vdd}
+N -2310 780 -2300 780 {
+lab=vcc}
+N -2310 900 -2300 900 {
+lab=vdd}
+N -2310 880 -2300 880 {
+lab=vcc}
+N -2310 1000 -2300 1000 {
+lab=vdd}
+N -2310 980 -2300 980 {
+lab=vcc}
+N -1740 560 -1570 560 {
+lab=#net18}
+N -1570 560 -1570 600 {
+lab=#net18}
+N -1810 340 -1740 340 {lab=#net18}
+N -1740 340 -1740 560 {lab=#net18}
 C {r2r.sym} -810 400 0 0 {name=x1}
 C {devices/lab_pin.sym} -1460 270 0 0 {name=p1 sig_type=std_logic lab=b0}
 C {devices/lab_pin.sym} -1460 370 0 0 {name=p2 sig_type=std_logic lab=b1}
@@ -229,20 +317,20 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.lib $::SKYWATER_MODELS/sky130.lib.spice tt_mm
 
 "
 spice_ignore=false}
-C {devices/vsource.sym} -540 -70 0 0 {name=V1 value="pulse(0 1.8 0 10p 10p 400n 800n)" savecurrent=false}
+C {devices/vsource.sym} -540 -70 0 0 {name=V1 value="pulse(0 1.8 0 200p 200p 400n 800n)" savecurrent=false}
 C {devices/gnd.sym} -540 -20 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} -570 -120 0 0 {name=p6 sig_type=std_logic lab=b3}
-C {devices/vsource.sym} -660 -70 0 0 {name=V2 value="pulse(0 1.8 0 10p 10p 200n 400n)" savecurrent=false}
+C {devices/vsource.sym} -660 -70 0 0 {name=V2 value="pulse(0 1.8 0 200p 200p 200n 400n)" savecurrent=false}
 C {devices/gnd.sym} -660 -20 0 0 {name=l2 lab=GND}
 C {devices/lab_pin.sym} -690 -120 0 0 {name=p7 sig_type=std_logic lab=b2}
-C {devices/vsource.sym} -770 -70 0 0 {name=V3 value="pulse(0 1.8 0 10p 10p 100n 200n)" savecurrent=false}
+C {devices/vsource.sym} -770 -70 0 0 {name=V3 value="pulse(0 1.8 0 200p 200p 100n 200n)" savecurrent=false}
 C {devices/gnd.sym} -770 -20 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} -800 -120 0 0 {name=p8 sig_type=std_logic lab=b1}
-C {devices/vsource.sym} -890 -70 0 0 {name=V4 value="pulse(0 1.8 0 10p 10p 50n 100n)" savecurrent=false}
+C {devices/vsource.sym} -890 -70 0 0 {name=V4 value="pulse(0 1.8 0 200p 200p 50n 100n)" savecurrent=false}
 C {devices/gnd.sym} -890 -20 0 0 {name=l4 lab=GND}
 C {devices/lab_pin.sym} -920 -120 0 0 {name=p9 sig_type=std_logic lab=b0
 }
@@ -257,7 +345,7 @@ value="
 * .options filetype=ascii
 .control
 *tran 1n 128n uic
-tran 1n 14000n uic
+tran 1n 14000n
 write tb_dac.raw
 .endc
 .end
@@ -267,16 +355,16 @@ C {devices/lab_pin.sym} -1460 770 0 0 {name=p11 sig_type=std_logic lab=b5}
 C {devices/lab_pin.sym} -1460 870 0 0 {name=p12 sig_type=std_logic lab=b6}
 C {devices/lab_pin.sym} -1460 970 0 0 {name=p13 sig_type=std_logic lab=b7
 }
-C {devices/vsource.sym} -540 120 0 0 {name=V5 value="pulse(0 1.8 0 10p 10p 6400n 12800n)" savecurrent=false}
+C {devices/vsource.sym} -540 120 0 0 {name=V5 value="pulse(0 1.8 0 200p 200p 6400n 12800n)" savecurrent=false}
 C {devices/gnd.sym} -540 170 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} -570 70 0 0 {name=p14 sig_type=std_logic lab=b7}
-C {devices/vsource.sym} -660 120 0 0 {name=V6 value="pulse(0 1.8 0 10p 10p 3200n 6400n)" savecurrent=false}
+C {devices/vsource.sym} -660 120 0 0 {name=V6 value="pulse(0 1.8 0 200p 200p 3200n 6400n)" savecurrent=false}
 C {devices/gnd.sym} -660 170 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} -690 70 0 0 {name=p15 sig_type=std_logic lab=b6}
-C {devices/vsource.sym} -770 120 0 0 {name=V7 value="pulse(0 1.8 0 10p 10p 1600n 3200n)" savecurrent=false}
+C {devices/vsource.sym} -770 120 0 0 {name=V7 value="pulse(0 1.8 0 200p 200p 1600n 3200n)" savecurrent=false}
 C {devices/gnd.sym} -770 170 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} -800 70 0 0 {name=p16 sig_type=std_logic lab=b5}
-C {devices/vsource.sym} -890 120 0 0 {name=V8 value="pulse(0 1.8 0 10p 10p 800n 1600n)" savecurrent=false}
+C {devices/vsource.sym} -890 120 0 0 {name=V8 value="pulse(0 1.8 0 200p 200p 800n 1600n)" savecurrent=false}
 C {devices/gnd.sym} -890 170 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} -920 70 0 0 {name=p17 sig_type=std_logic lab=b4
 
@@ -339,3 +427,92 @@ C {devices/gnd.sym} -1160 930 0 0 {name=l20 lab=GND}
 C {devices/gnd.sym} -1160 1030 0 0 {name=l21 lab=GND}
 C {pad_model.sym} -570 610 0 0 {name=x10}
 C {devices/gnd.sym} -720 630 0 0 {name=l8 lab=GND}
+C {r2r.sym} -1960 410 0 0 {name=x11
+schematic=r2r_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/r2r.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/r2r.sim.spice]"}
+C {devices/lab_pin.sym} -2610 280 0 0 {name=p36 sig_type=std_logic lab=b0}
+C {devices/lab_pin.sym} -2610 380 0 0 {name=p37 sig_type=std_logic lab=b1}
+C {devices/lab_pin.sym} -2610 480 0 0 {name=p38 sig_type=std_logic lab=b2}
+C {devices/lab_pin.sym} -2610 580 0 0 {name=p39 sig_type=std_logic lab=b3}
+C {devices/lab_pin.sym} -1870 600 0 0 {name=p40 sig_type=std_logic lab=out2}
+C {devices/gnd.sym} -1810 360 0 0 {name=l7 lab=GND}
+C {devices/lab_pin.sym} -2610 680 0 0 {name=p41 sig_type=std_logic lab=b4}
+C {devices/lab_pin.sym} -2610 780 0 0 {name=p42 sig_type=std_logic lab=b5}
+C {devices/lab_pin.sym} -2610 880 0 0 {name=p43 sig_type=std_logic lab=b6}
+C {devices/lab_pin.sym} -2610 980 0 0 {name=p44 sig_type=std_logic lab=b7
+}
+C {dac_drive.sym} -2460 310 0 0 {name=x12
+schematic=dac_drive_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/dac_drive.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/dac_drive.sim.spice]"}
+C {dac_drive.sym} -2460 410 0 0 {name=x13
+schematic=dac_drive_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/dac_drive.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/dac_drive.sim.spice]"}
+C {dac_drive.sym} -2460 510 0 0 {name=x14
+schematic=dac_drive_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/dac_drive.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/dac_drive.sim.spice]"}
+C {dac_drive.sym} -2460 610 0 0 {name=x15
+schematic=dac_drive_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/dac_drive.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/dac_drive.sim.spice]"}
+C {dac_drive.sym} -2460 710 0 0 {name=x16
+schematic=dac_drive_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/dac_drive.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/dac_drive.sim.spice]"}
+C {dac_drive.sym} -2460 810 0 0 {name=x17
+schematic=dac_drive_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/dac_drive.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/dac_drive.sim.spice]"}
+C {dac_drive.sym} -2460 910 0 0 {name=x18
+schematic=dac_drive_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/dac_drive.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/dac_drive.sim.spice]"}
+C {dac_drive.sym} -2460 1010 0 0 {name=x19
+schematic=dac_drive_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/dac_drive.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/dac_drive.sim.spice]"}
+C {devices/lab_pin.sym} -2310 300 2 0 {name=p45 sig_type=std_logic lab=vdd
+}
+C {devices/lab_pin.sym} -2310 280 2 0 {name=p46 sig_type=std_logic lab=vcc
+}
+C {devices/lab_pin.sym} -2300 400 2 0 {name=p47 sig_type=std_logic lab=vdd
+}
+C {devices/lab_pin.sym} -2300 380 2 0 {name=p48 sig_type=std_logic lab=vcc
+}
+C {devices/lab_pin.sym} -2300 500 2 0 {name=p49 sig_type=std_logic lab=vdd
+}
+C {devices/lab_pin.sym} -2300 480 2 0 {name=p50 sig_type=std_logic lab=vcc
+}
+C {devices/lab_pin.sym} -2300 600 2 0 {name=p51 sig_type=std_logic lab=vdd
+}
+C {devices/lab_pin.sym} -2300 580 2 0 {name=p52 sig_type=std_logic lab=vcc
+}
+C {devices/lab_pin.sym} -2300 700 2 0 {name=p53 sig_type=std_logic lab=vdd
+}
+C {devices/lab_pin.sym} -2300 680 2 0 {name=p54 sig_type=std_logic lab=vcc
+}
+C {devices/lab_pin.sym} -2300 800 2 0 {name=p55 sig_type=std_logic lab=vdd
+}
+C {devices/lab_pin.sym} -2300 780 2 0 {name=p56 sig_type=std_logic lab=vcc
+}
+C {devices/lab_pin.sym} -2300 900 2 0 {name=p57 sig_type=std_logic lab=vdd
+}
+C {devices/lab_pin.sym} -2300 880 2 0 {name=p58 sig_type=std_logic lab=vcc
+}
+C {devices/lab_pin.sym} -2300 1000 2 0 {name=p59 sig_type=std_logic lab=vdd
+}
+C {devices/lab_pin.sym} -2300 980 2 0 {name=p60 sig_type=std_logic lab=vcc
+}
+C {devices/gnd.sym} -2310 340 0 0 {name=l22 lab=GND}
+C {devices/gnd.sym} -2310 440 0 0 {name=l23 lab=GND}
+C {devices/gnd.sym} -2310 540 0 0 {name=l24 lab=GND}
+C {devices/gnd.sym} -2310 640 0 0 {name=l25 lab=GND}
+C {devices/gnd.sym} -2310 740 0 0 {name=l26 lab=GND}
+C {devices/gnd.sym} -2310 840 0 0 {name=l27 lab=GND}
+C {devices/gnd.sym} -2310 940 0 0 {name=l28 lab=GND}
+C {devices/gnd.sym} -2310 1040 0 0 {name=l29 lab=GND}
+C {pad_model.sym} -1720 620 0 0 {name=x20}
+C {devices/gnd.sym} -1870 640 0 0 {name=l30 lab=GND}
