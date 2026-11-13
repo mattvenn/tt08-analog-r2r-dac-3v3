@@ -1,0 +1,6 @@
+pytest
+pyvisa
+pyvisa-py
+numpy
+matplotlib
+mpremote

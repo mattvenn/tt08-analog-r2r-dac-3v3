@@ -32,6 +32,22 @@ To change the frequency, set the inputs and then raise the 'load divider' input.
 
 An oscilloscope to measure the output voltage on analog pin 0.
 
+On the TT08 (RP2040) demoboard, `ua[0]` (DAC output) comes out on analog header **A5**
+(website pin "K", internal index 5).
+
+## Hardware-in-the-loop test
+
+`test/test_hil.py` drives the DAC codes directly from the RP2040 (external data mode) and
+uses a Keysight HD304MSO to measure the static transfer function (monotonicity, DNL, INL,
+offset, gain) plus full-scale step response and the 127→128 major-carry glitch.
+See the docstring at the top of that file for wiring and usage.
+
+Measured on TT08 silicon: offset 3.7 mV, full scale 3.242 V, LSB 12.70 mV, INL 1.9 LSB.
+The DAC is not monotonic at the major carries. 127→128 steps down by 24.8 mV (−1.95 LSB),
+and 63→64 and 191→192 each step down by about 5.7 mV.
+
+![non-monotonic step at 127 to 128](nonmonotonic_127_128.png)
+
 ## Test
 
 ![test](scope_image.png)
