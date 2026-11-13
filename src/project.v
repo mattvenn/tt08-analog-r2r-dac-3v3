@@ -31,7 +31,7 @@ module tt_um_mattvenn_r2r_dac_3v3 (
         .VGND(VGND)
         );
 
-    dac_drive dac_drive0(
+    dac_drive_sized dac_drive0(
         .VAPWR(VAPWR),
         .VDPWR(VDPWR),
         .VGND(VGND),
@@ -39,7 +39,7 @@ module tt_um_mattvenn_r2r_dac_3v3 (
         .out(r2r_3v3[0])
         );
 
-    dac_drive dac_drive1(
+    dac_drive_sized dac_drive1(
         .VAPWR(VAPWR),
         .VDPWR(VDPWR),
         .VGND(VGND),
@@ -47,7 +47,7 @@ module tt_um_mattvenn_r2r_dac_3v3 (
         .out(r2r_3v3[1])
         );
 
-    dac_drive dac_drive2(
+    dac_drive_sized dac_drive2(
         .VAPWR(VAPWR),
         .VDPWR(VDPWR),
         .VGND(VGND),
@@ -55,7 +55,7 @@ module tt_um_mattvenn_r2r_dac_3v3 (
         .out(r2r_3v3[2])
         );
 
-    dac_drive dac_drive3(
+    dac_drive_sized dac_drive3(
         .VAPWR(VAPWR),
         .VDPWR(VDPWR),
         .VGND(VGND),
@@ -63,7 +63,7 @@ module tt_um_mattvenn_r2r_dac_3v3 (
         .out(r2r_3v3[3])
         );
 
-    dac_drive dac_drive4(
+    dac_drive_sized dac_drive4(
         .VAPWR(VAPWR),
         .VDPWR(VDPWR),
         .VGND(VGND),
@@ -71,7 +71,7 @@ module tt_um_mattvenn_r2r_dac_3v3 (
         .out(r2r_3v3[4])
         );
 
-    dac_drive dac_drive5(
+    dac_drive_sized dac_drive5(
         .VAPWR(VAPWR),
         .VDPWR(VDPWR),
         .VGND(VGND),
@@ -79,7 +79,7 @@ module tt_um_mattvenn_r2r_dac_3v3 (
         .out(r2r_3v3[5])
         );
 
-    dac_drive dac_drive6(
+    dac_drive_sized dac_drive6(
         .VAPWR(VAPWR),
         .VDPWR(VDPWR),
         .VGND(VGND),
@@ -87,7 +87,7 @@ module tt_um_mattvenn_r2r_dac_3v3 (
         .out(r2r_3v3[6])
         );
 
-    dac_drive dac_drive7(
+    dac_drive_sized dac_drive7(
         .VAPWR(VAPWR),
         .VDPWR(VDPWR),
         .VGND(VGND),

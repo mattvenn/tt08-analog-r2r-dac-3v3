@@ -7,5 +7,5 @@ readnet verilog ../src/project.v $source
 readnet verilog ../verilog/gl/r2r_dac_control.v $source
 # add any spice files of your analog blocks:
 readnet spice ../xschem/simulation/r2r.spice $source
-readnet spice ../xschem/simulation/dac_drive.spice $source
+readnet spice ../xschem/simulation/dac_drive_sized.spice $source
 lvs "$layout $project" "$source $project" $::env(PDK_ROOT)/sky130A/libs.tech/netgen/sky130A_setup.tcl lvs.report -blackbox

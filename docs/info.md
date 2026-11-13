@@ -11,7 +11,9 @@ You can also include images in this folder and reference them in the markdown. E
 
 A simple 8 bit R2R DAC. Driven externally or by an digitally generated sine waveform generator.
 
-3.3v output is achieved with level shifting drivers.
+3.3v output is achieved with level shifting drivers. The TT08 version didn't have large enough drivers, which resulted in a non-monotonic output.
+
+This version makes the output N and Pfets 5x larger (PMOS W=45um nf=15, NMOS W=15um nf=5) to get a monotonic output.
 
 ## How to test
 
